@@ -1,12 +1,30 @@
-import '../public/assets/index.css'
-import 'boxicons/css/boxicons.min.css'
+import '../public/assets/index.css';
+import 'boxicons/css/boxicons.min.css';
 
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
+import { library } from '@fortawesome/fontawesome-svg-core';
 
-const app = createApp(App)
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
-app.use(router)
+import { faUserSecret } from '@fortawesome/free-solid-svg-icons';
 
-app.mount('#app')
+import { createApp } from 'vue';
+import App from './App.vue';
+import router from './router';
+import store from './store/store';
+
+const app = createApp(App);
+
+app.use(router);
+app.use(store);
+
+library.add(faUserSecret);
+
+app.component('font-awesome-icon', FontAwesomeIcon)
+
+router.beforeEach((to, from, next) => {
+  // Remonte en haut de la page lors de la navigation
+  window.scrollTo(0, 0);
+  next();
+});
+
+app.mount('#app');
