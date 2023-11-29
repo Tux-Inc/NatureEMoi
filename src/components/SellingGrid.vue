@@ -9,7 +9,7 @@
             <p class="text-mygreen font-montserrat font-bold text-left text-xl">{{ prices[0] }}€</p>
           </div>
           <button
-            class="text-white bg-mygreen font-montserrat py-2.5 px-5 text-sm rounded-full transition-all ease-in duration-100 hover:bg-white hover:text-mygreen hover:border-mygreen hover:border-2 hover:transition-all hover:ease-in hover:duration-100">En
+            class="text-white bg-mygreen font-montserrat py-2.5 px-5 border-2 text-sm rounded-full transition-all ease-in duration-100 hover:bg-white hover:text-mygreen hover:border-mygreen hover:border-2 hover:transition-all hover:ease-in hover:duration-100">En
             savoir plus</button>
         </div>
       </div>
@@ -24,7 +24,7 @@
             <p class="text-mygreen font-montserrat font-bold text-left text-xl">{{ prices[1] }}€</p>
           </div>
           <button
-            class="text-white bg-mygreen font-montserrat py-2.5 px-5 text-sm rounded-full transition-all ease-in duration-100 hover:bg-white hover:text-mygreen hover:border-mygreen hover:border-2 hover:transition-all hover:ease-in hover:duration-100">En
+            class="text-white bg-mygreen font-montserrat py-2.5 px-5 border-2 text-sm rounded-full transition-all ease-in duration-100 hover:bg-white hover:text-mygreen hover:border-mygreen hover:border-2 hover:transition-all hover:ease-in hover:duration-100">En
             savoir plus</button>
         </div>
       </div>
@@ -39,7 +39,7 @@
             <p class="text-mygreen font-montserrat font-bold text-left text-xl">{{ prices[2] }}€</p>
           </div>
           <button
-            class="text-white bg-mygreen font-montserrat py-2.5 px-5 text-sm rounded-full transition-all ease-in duration-100 hover:bg-white hover:text-mygreen hover:border-mygreen hover:border-2 hover:transition-all hover:ease-in hover:duration-100">En
+            class="text-white bg-mygreen font-montserrat py-2.5 px-5 border-2 text-sm rounded-full transition-all ease-in duration-100 hover:bg-white hover:text-mygreen hover:border-mygreen hover:border-2 hover:transition-all hover:ease-in hover:duration-100">En
             savoir plus</button>
         </div>
       </div>

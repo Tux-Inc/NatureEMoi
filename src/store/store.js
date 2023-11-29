@@ -7,6 +7,7 @@ export default createStore({
   mutations: {
     toggleForm(state) {
       state.showForm = !state.showForm;
+      console.log(state.showForm);
     },
   },
 });
