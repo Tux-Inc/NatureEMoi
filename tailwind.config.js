@@ -7,12 +7,16 @@ module.exports = {
   darkMode: false,
   theme: {
     colors: {
-      'mygreen': "#ADD981",
+      'mylightgreen': "#a3b18a",
+      'mydarkgreen': "#344e41",
+      'mygreen': "#588157",
+      'mygray': "#dad7cd",
       'myblue': "#1455CD",
-      'mygray': "#E8E6E6",
       'myred': "#FF0000",
       'white': "#FFFFFF",
-      'transparent': '#FFFFFFDF',
+      'transparent': '#FFFFFFdf',
+      'transparent-gray': '#E8E6E6f2',
+      'transparent-lightgray': '#E8E6E6b3',
       'black': "#000000",
     },
     fontFamily: {
@@ -20,7 +24,7 @@ module.exports = {
       'montserrat': ['Montserrat', 'sans-serif'],
     },
     backgroundImage: {
-      'backgroundHeader': 'url("/public/assets/bg.jpg")',
+      'backgroundHeader': 'url("/assets/bg.jpg")',
       'bestSale-1': 'url("/src/assets/best_sale/1.jpg")',
       'bestSale-2': 'url("/src/assets/best_sale/2.jpg")',
       'bestSale-3': 'url("/src/assets/best_sale/3.jpg")',
