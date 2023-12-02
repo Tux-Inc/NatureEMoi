@@ -4,6 +4,7 @@ import SellingCard from '../components/SellingCard.vue'
 import SellingGrid from '../components/SellingGrid.vue'
 import Slider from '../components/Slider.vue'
 import CartView from '../components/CartView.vue';
+import UserView from '../components/UserView.vue';
 
 import { mapState, mapMutations } from 'vuex';
 
@@ -27,7 +28,7 @@ export default {
     }
   },
   computed: {
-    ...mapState(['showForm'])
+    ...mapState(['showCart', 'showUser'])
   },
   components: {
     SellingCard,
@@ -36,7 +37,7 @@ export default {
     CartView
 },
   methods: {
-    ...mapMutations(['toggleForm']),
+    ...mapMutations(['toggleCart', 'toggleUser']),
   },
 }
 
@@ -62,8 +63,8 @@ export default {
 
       <div class="h-full mx-12">
         <nav class="h-full flex justify-between items-center px-6 mx-6">
-          <button class="text-white rounded-full px-8 font-montserrat text-lg transition-all ease-in duration-150 hover:py-9 hover:px-8 hover:text-mygreen hover:bg-white hover:transition-all hover:ease-in hover:duration-150 hover:focus:outline-none" @click="toggleForm"><i class="bx bx-cart text-2xl"></i></button>
-          <button class="text-white rounded-full px-8 font-montserrat text-lg transition-all ease-in duration-150 hover:py-9 hover:px-8 hover:text-mygreen hover:bg-white hover:transition-all hover:ease-in hover:duration-150 hover:focus:outline-none"><i class="bx bx-user-circle text-2xl"></i></button>
+          <button class="text-white rounded-full px-8 font-montserrat text-lg transition-all ease-in duration-150 hover:py-9 hover:px-8 hover:text-mygreen hover:bg-white hover:transition-all hover:ease-in hover:duration-150 hover:focus:outline-none" @click="toggleCart"><i class="bx bx-cart text-2xl"></i></button>
+          <button class="text-white rounded-full px-8 font-montserrat text-lg transition-all ease-in duration-150 hover:py-9 hover:px-8 hover:text-mygreen hover:bg-white hover:transition-all hover:ease-in hover:duration-150 hover:focus:outline-none" @click="toggleUser"><i class="bx bx-user-circle text-2xl"></i></button>
         </nav>
       </div>
 
@@ -73,7 +74,7 @@ export default {
       <h1 class="font-abril-fatface font-normal text-8xl text-mygray px-5 py-14">Nature Emoi, meilleur que le chocolat</h1>
     </div>
 
-    <CartView v-if="showForm" />
+    <CartView v-if="showCart" />
 
   </section>
 

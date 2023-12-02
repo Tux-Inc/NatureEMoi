@@ -15,20 +15,23 @@
     
     <div class="h-full mx-12">
       <nav class="h-full flex justify-between items-center px-6 mx-6">
-        <button class="text-mygreen rounded-full px-8 font-montserrat text-lg transition-all ease-in duration-150 hover:py-3 hover:px-8 hover:text-white hover:bg-mygreen hover:transition-all hover:ease-in hover:duration-150 hover:focus:outline-none hover:rounded-full" @click="toggleForm"><i class="bx bx-cart text-2xl"></i></button>
-        <button class="text-mygreen rounded-full px-8 font-montserrat text-lg transition-all ease-in duration-150 hover:py-3 hover:px-8 hover:text-white hover:bg-mygreen hover:transition-all hover:ease-in hover:duration-150 hover:focus:outline-none hover:rounded-full"><i class="bx bx-user-circle text-2xl"></i></button>
+        <button class="text-mygreen rounded-full px-8 font-montserrat text-lg transition-all ease-in duration-150 hover:py-3 hover:px-8 hover:text-white hover:bg-mygreen hover:transition-all hover:ease-in hover:duration-150 hover:focus:outline-none hover:rounded-full" @click="toggleCart"><i class="bx bx-cart text-2xl"></i></button>
+        <button class="text-mygreen rounded-full px-8 font-montserrat text-lg transition-all ease-in duration-150 hover:py-3 hover:px-8 hover:text-white hover:bg-mygreen hover:transition-all hover:ease-in hover:duration-150 hover:focus:outline-none hover:rounded-full" @click="toggleUser"><i class="bx bx-user-circle text-2xl"></i></button>
       </nav>
     </div>
     
   </header>
   
-  <CartView v-if="showForm" />
+  <CartView v-if="showCart" />
+
+  <UserView v-if="showUser" />
   
 </template>
 
 <script>
 
 import CartView from './CartView.vue';
+import UserView from './UserView.vue';
 
 import { mapState, mapMutations } from 'vuex';
 
@@ -40,7 +43,7 @@ export default {
     window.addEventListener('scroll', this.handleScroll);
   },
   computed: {
-    ...mapState(['showForm'])
+    ...mapState(['showCart', 'showUser'])
   },
   methods: {
     handleScroll() {
@@ -52,9 +55,9 @@ export default {
         fixedMenu.style.visibility = 'hidden';
       }
     },
-    ...mapMutations(['toggleForm']),
+    ...mapMutations(['toggleCart', 'toggleUser']),
   },
-  components: { CartView }
+  components: { CartView, UserView }
 }
 </script>
 

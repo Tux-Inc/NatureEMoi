@@ -16,7 +16,7 @@ module.exports = {
       'white': "#FFFFFF",
       'transparent': '#FFFFFFdf',
       'transparent-gray': '#E8E6E6f2',
-      'transparent-lightgray': '#E8E6E6b3',
+      'transparent-lightgray': '#E8E6E6cc',
       'black': "#000000",
     },
     fontFamily: {

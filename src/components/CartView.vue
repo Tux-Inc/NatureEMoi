@@ -7,10 +7,10 @@
 
         <div class="flex justify-between pb-4">
           <div class="">
-            <h2 class="text-4xl text-mydarkgreen text-left ml-6 mt-8">Votre panier</h2>
+            <h2 class="text-4xl text-mydarkgreen text-left ml-6 mt-8">Votre Panier</h2>
             <div class="w-10 h-1 bg-mygreen ml-6 mt-2"></div>
           </div>
-          <button class="self-center bx bx-x text-4xl text-mygreen mt-6 mr-8 rounded-full transition-all ease-in duration-100 hover:text-white hover:bg-mygreen hover:transition-all hover:ease-in hover-duration-100 hover:rotate-90" @click="toggleForm"></button>
+          <button class="self-center bx bx-x text-4xl text-mygreen mt-6 mr-8 rounded-full transition-all ease-in duration-100 hover:text-white hover:bg-mygreen hover:transition-all hover:ease-in hover-duration-100 hover:rotate-90" @click="toggleCart"></button>
         </div>
 
         <div class="">
@@ -106,11 +106,11 @@ export default {
   },
   computed: {
     // Your computed properties
-    ...mapState(['showForm']),
+    ...mapState(['showCart']),
   },
   methods: {
     // Your methods
-    ...mapMutations(['toggleForm']),
+    ...mapMutations(['toggleCart']),
   },
   mounted() {
     // Code to run when the component is mounted

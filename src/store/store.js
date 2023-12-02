@@ -2,12 +2,17 @@ import { createStore } from 'vuex';
 
 export default createStore({
   state: {
-    showForm: false,
+    showCart: false,
+    showUser: false,
   },
   mutations: {
-    toggleForm(state) {
-      state.showForm = !state.showForm;
-      console.log(state.showForm);
+    toggleCart(state) {
+      state.showCart = !state.showCart;
+      console.log(state.showCart);
+    },
+    toggleUser(state) {
+      state.showUser = !state.showUser;
+      console.log(state.showUser);
     },
   },
 });
