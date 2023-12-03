@@ -1,11 +1,29 @@
-<script setup>
+<script>
 import { RouterLink, RouterView } from 'vue-router'
 import ScrollMenu from './components/ScrollMenu.vue';
+import ProductView from './components/ProductView.vue';
+
+import { mapState, mapMutations } from 'vuex';
+
+export default {
+  components: {
+    ScrollMenu,
+    ProductView,
+  },
+  computed: {
+    ...mapState(['showProduct'])
+  },
+  methods: {
+    ...mapMutations(['toggleProduct']),
+  },
+}
+
 </script>
 
 <template>
   <RouterView />
   <ScrollMenu />
+  <ProductView v-if="showProduct" />
 </template>
 
 <style scoped>

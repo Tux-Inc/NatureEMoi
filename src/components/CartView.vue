@@ -1,9 +1,8 @@
 <template>
   <!-- Your HTML template code goes here -->
-  <div class="fixedPosition relative bg-transparent-lightgray h-screen w-screen ">
+  <div class="fixedPosition relative bg-transparent-lightgray h-screen w-screen">
 
     <div class="animated-form bg-white absolute inset-y-0 right-4 h-screen w-1/4">
-
 
         <div class="flex justify-between pb-4">
           <div class="">

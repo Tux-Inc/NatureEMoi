@@ -61,11 +61,11 @@ export default {
         <div>
           <form class="flex flex-col">
             <div class="flex justify-between">
-              <div class="flex flex-col w-2/5">
+              <div class="flex flex-col w-5/12">
                 <label class="text-mydarkgreen text-left mt-4">Nom</label>
                 <input class="border border-mydarkgreen rounded-lg px-2 py-1" type="email" placeholder="Nom">
               </div>
-              <div class="flex flex-col w-2/5">
+              <div class="flex flex-col w-5/12">
                 <label class="text-mydarkgreen text-left mt-4">Prénom</label>
                 <input class="border border-mydarkgreen rounded-lg px-2 py-1" type="email" placeholder="Prénom">
               </div>

@@ -1,9 +1,35 @@
-<script setup>
+<script>
 
-defineProps({
-  price: String,
-  image: String,
-})
+import { mapState, mapMutations } from 'vuex';
+
+export default {
+  // Your JavaScript code goes here
+  components: {
+  },
+  data() {
+    return {
+      // Your data properties
+    };
+  },
+  computed: {
+    // Your computed properties
+    ...mapState(['showProduct']),
+  },
+  methods: {
+    // Your methods
+    ...mapMutations(['toggleProduct']),
+  },
+  props: {
+    image: {
+      type: String,
+      required: true,
+    },
+    price: {
+      type: String,
+      required: true,
+    },
+  },
+}
 
 </script>
 
@@ -15,7 +41,7 @@ defineProps({
           <p class="text-mydarkgreen font-montserrat font-medium text-left text-4xl">Plante</p>
           <p class="text-mygreen font-montserrat font-bold text-left text-xl">{{ price }}€</p>
         </div>
-      <button class="text-white bg-mygreen font-montserrat border-2 py-2.5 px-5 text-sm rounded-full transition-all ease-in duration-100 hover:bg-white hover:text-mygreen hover:border-mygreen hover:border-2 hover:transition-all hover:ease-in hover:duration-100">En savoir plus</button>
+      <button class="text-white bg-mygreen font-montserrat border-2 py-2.5 px-5 text-sm rounded-full transition-all ease-in duration-100 hover:bg-white hover:text-mygreen hover:border-mygreen hover:border-2 hover:transition-all hover:ease-in hover:duration-100" @click="toggleProduct">En savoir plus</button>
       </div>
     </div>
   </div>

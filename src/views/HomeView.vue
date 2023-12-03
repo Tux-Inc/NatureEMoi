@@ -34,7 +34,6 @@ export default {
     SellingCard,
     SellingGrid,
     Slider,
-    CartView
 },
   methods: {
     ...mapMutations(['toggleCart', 'toggleUser']),
@@ -74,7 +73,6 @@ export default {
       <h1 class="font-abril-fatface font-normal text-8xl text-mygray px-5 py-14">Nature Emoi, meilleur que le chocolat</h1>
     </div>
 
-    <CartView v-if="showCart" />
 
   </section>
 

@@ -56,10 +56,6 @@ export default {
       </div>
       
     </header>
-
-    <CartView v-if="showCart" />
-
-    <UserView v-if="showUser" />
     
   </section>
   
