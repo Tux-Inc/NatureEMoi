@@ -9,8 +9,7 @@
             <p class="text-mygreen font-montserrat font-bold text-left text-xl">{{ prices[0] }}€</p>
           </div>
           <button
-            class="text-white bg-mygreen font-montserrat py-2.5 px-5 border-2 text-sm rounded-full transition-all ease-in duration-100 hover:bg-white hover:text-mygreen hover:border-mygreen hover:border-2 hover:transition-all hover:ease-in hover:duration-100">En
-            savoir plus</button>
+            class="text-white bg-mygreen font-montserrat py-2.5 px-5 border-2 text-sm rounded-full transition-all ease-in duration-100 hover:bg-white hover:text-mygreen hover:border-mygreen hover:border-2 hover:transition-all hover:ease-in hover:duration-100" @click="toggleProduct">En savoir plus</button>
         </div>
       </div>
     </div>
@@ -24,8 +23,7 @@
             <p class="text-mygreen font-montserrat font-bold text-left text-xl">{{ prices[1] }}€</p>
           </div>
           <button
-            class="text-white bg-mygreen font-montserrat py-2.5 px-5 border-2 text-sm rounded-full transition-all ease-in duration-100 hover:bg-white hover:text-mygreen hover:border-mygreen hover:border-2 hover:transition-all hover:ease-in hover:duration-100">En
-            savoir plus</button>
+            class="text-white bg-mygreen font-montserrat py-2.5 px-5 border-2 text-sm rounded-full transition-all ease-in duration-100 hover:bg-white hover:text-mygreen hover:border-mygreen hover:border-2 hover:transition-all hover:ease-in hover:duration-100" @click="toggleProduct">En savoir plus</button>
         </div>
       </div>
     </div>
@@ -39,8 +37,7 @@
             <p class="text-mygreen font-montserrat font-bold text-left text-xl">{{ prices[2] }}€</p>
           </div>
           <button
-            class="text-white bg-mygreen font-montserrat py-2.5 px-5 border-2 text-sm rounded-full transition-all ease-in duration-100 hover:bg-white hover:text-mygreen hover:border-mygreen hover:border-2 hover:transition-all hover:ease-in hover:duration-100">En
-            savoir plus</button>
+            class="text-white bg-mygreen font-montserrat py-2.5 px-5 border-2 text-sm rounded-full transition-all ease-in duration-100 hover:bg-white hover:text-mygreen hover:border-mygreen hover:border-2 hover:transition-all hover:ease-in hover:duration-100" @click="toggleProduct">En savoir plus</button>
         </div>
       </div>
     </div>
@@ -48,11 +45,37 @@
   </div>
 </template>
 
-<script setup>
+<script>
 
-defineProps({
-  prices: Array,
-  images: Array,
-})
+import { mapState, mapMutations } from 'vuex';
+
+export default {
+  // Your JavaScript code goes here
+  components: {
+  },
+  data() {
+    return {
+      // Your data properties
+    };
+  },
+  computed: {
+    // Your computed properties
+    ...mapState(['showProduct']),
+  },
+  methods: {
+    // Your methods
+    ...mapMutations(['toggleProduct']),
+  },
+  props: {
+    images: {
+      type: Array[3],
+      required: true,
+    },
+    prices: {
+      type: Array[3],
+      required: true,
+    },
+  },
+}
 
 </script>
